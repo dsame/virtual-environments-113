@@ -39,3 +39,6 @@ jobs:
         $Env:Path="C:\python;$Path"
         c:\python\python -V
         python -V
+        curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+        python get-pip.py
+        pip install pyinstaller
