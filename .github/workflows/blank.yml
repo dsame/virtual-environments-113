@@ -42,5 +42,8 @@ jobs:
         Invoke-WebRequest -Uri "https://bootstrap.pypa.io/get-pip.py" -OutFile "get-pip.py"
         python get-pip.py
         $Env:Path="C:\python;C:\python\Scripts;$Path"
+        python -V
+        C:\python\Scripts\pip -V
+        pip -V
         pip install pyinstaller
       
