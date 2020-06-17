@@ -39,8 +39,7 @@ jobs:
         $Env:Path="C:\python;$Path"
         c:\python\python -V
         python -V
-        curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-        echo get-pip
+        Invoke-WebRequest -Uri "https://bootstrap.pypa.io/get-pip.py" -OutFile "get-pip.py"
         python get-pip.py
         echo php install
         pip install pyinstaller
