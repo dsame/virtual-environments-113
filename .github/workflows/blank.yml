@@ -44,6 +44,6 @@ jobs:
         $Env:Path="C:\python;C:\python\Scripts;$Path"
         python -V
         C:\python\Scripts\pip -V
-        pip -V
-        pip install pyinstaller
+     #   pip -V
+     #   pip install pyinstaller
       
