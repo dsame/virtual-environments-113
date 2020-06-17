@@ -35,5 +35,6 @@ jobs:
     - name: Test
       shell: pwsh
       run: |
+        [System.Environment]::GetEnvironmentVariable('PATH','machine')
         c:\python\python -V
         python -V
