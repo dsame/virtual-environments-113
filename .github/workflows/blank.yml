@@ -40,5 +40,7 @@ jobs:
         c:\python\python -V
         python -V
         curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+        echo get-pip
         python get-pip.py
+        echo php install
         pip install pyinstaller
