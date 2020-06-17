@@ -35,7 +35,7 @@ jobs:
     - name: Test
       shell: pwsh
       run: |
-        [System.Environment]::GetEnvironmentVariable('PATH','machine')
-        $Env:Path
+        $Path = [System.Environment]::GetEnvironmentVariable('PATH','machine')
+        $Env:Path="C:\python;$Path"
         c:\python\python -V
         python -V
