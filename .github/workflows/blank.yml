@@ -29,7 +29,7 @@ jobs:
         Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.8.3/python-3.8.3-embed-amd64.zip" -OutFile "python.zip"
         Expand-Archive -Path python.zip -DestinationPath C:\python
         $Path = [System.Environment]::GetEnvironmentVariable('PATH','machine')
-        [System.Environment]::SetEnvironmentVariable('PATH', "c:\python:$Path",[System.EnvironmentVariableTarget]::Machine)
+        [System.Environment]::SetEnvironmentVariable('PATH', "c:\python;$Path",[System.EnvironmentVariableTarget]::Machine)
 
     # Runs a single command using the runners shell
     - name: Test
