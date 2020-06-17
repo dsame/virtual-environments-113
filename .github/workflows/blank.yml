@@ -36,10 +36,10 @@ jobs:
       shell: pwsh
       run: |
         $Path = [System.Environment]::GetEnvironmentVariable('PATH','machine')
-        $Env:Path="C:\python;C:\python\Scripts;$Path"
+        $Env:Path="C:\python\Scripts;$Path"
         c:\python\python -V
         python -V
         Invoke-WebRequest -Uri "https://bootstrap.pypa.io/get-pip.py" -OutFile "get-pip.py"
         python get-pip.py
-        echo php install
+        $Env:Path="C:\python;C:\python\Scripts;$Path"
         pip install pyinstaller
