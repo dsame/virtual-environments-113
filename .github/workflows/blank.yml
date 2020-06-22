@@ -35,6 +35,6 @@ jobs:
       shell: bash
       run: |
         mkdir /tmp/d
-        mongod mongod --dbpath /tmp/d --fork --logpath /tmp/log
+        mongod mongod --dbpath /tmp/d --logpath /tmp/log
         sleep 5
         echo 'db'  | mongo 127.0.0.1
