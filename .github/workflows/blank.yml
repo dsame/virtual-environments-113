@@ -15,7 +15,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: windows-2019
+    runs-on: ubuntu
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -24,26 +24,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Test
-      shell: pwsh
+      shell: bash
       run: |
-        Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.8.3/python-3.8.3-embed-amd64.zip" -OutFile "python.zip"
-        Expand-Archive -Path python.zip -DestinationPath C:\python
-        $Path = [System.Environment]::GetEnvironmentVariable('PATH','machine')
-        [System.Environment]::SetEnvironmentVariable('PATH', "C:\python;$Path",[System.EnvironmentVariableTarget]::Machine)
-
-    # Runs a single command using the runners shell
-    - name: Test
-      shell: pwsh
-      run: |
-        $Path = [System.Environment]::GetEnvironmentVariable('PATH','machine')
-        $Env:Path="C:\python;$Path"
-        c:\python\python -V
-        python -V
-        Invoke-WebRequest -Uri "https://bootstrap.pypa.io/get-pip.py" -OutFile "get-pip.py"
-        python get-pip.py
-        $Env:Path="C:\python;C:\python\Scripts;$Path"
-        python -V
-        C:\python\Scripts\pip -V
-     #   pip -V
-     #   pip install pyinstaller
-      
+        which mongod
+        mongod --version
