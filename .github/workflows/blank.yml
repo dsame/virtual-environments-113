@@ -34,6 +34,6 @@ jobs:
       shell: bash
       run: |
         sudo apt-get purge libzip4
-        dpkg -L libzip4
+        dpkg -L libzip4 || true
         sudo apt-get install libzip4
         dpkg -L libzip4
