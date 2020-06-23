@@ -23,18 +23,7 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: search libzip4 with apt-cache 
+    - name: show current libzip-dev 
       shell: bash
       run: |
-        apt-cache search libzip4
-
-
-    # Runs a single command using the runners shell
-    - name: try to reinstall
-      shell: bash
-      run: |
-        set -x
-        sudo apt-get purge libzip4
-        dpkg -L libzip4 || true
-        sudo apt-get install libzip4
-        dpkg -L libzip4
+        apt-cache showpkg libzip-dev
