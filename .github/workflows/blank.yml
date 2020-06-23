@@ -27,5 +27,6 @@ jobs:
       shell: bash
       run: |
         apt-cache showpkg libzip-dev
-        sudo apt-get install libzip5
+        sudo apt-get remove libzip-dev
+        sudo apt-get install -t focal libzip5 libzip-dev
         apt-cache showpkg libzip5
