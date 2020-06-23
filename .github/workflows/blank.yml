@@ -33,6 +33,7 @@ jobs:
     - name: try to reinstall
       shell: bash
       run: |
+        set -x
         sudo apt-get purge libzip4
         dpkg -L libzip4 || true
         sudo apt-get install libzip4
