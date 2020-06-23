@@ -27,3 +27,5 @@ jobs:
       shell: bash
       run: |
         apt-cache showpkg libzip-dev
+        sudo apt-get install libzip5
+        apt-cache showpkg libzip5
